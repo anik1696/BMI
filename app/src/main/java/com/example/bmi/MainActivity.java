@@ -36,17 +36,23 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                float weight = Float.parseFloat(weightStr);
-                float feet = Float.parseFloat(feetStr);
-                float inch = Float.parseFloat(inchStr);
+                try {
+                    float weight = Float.parseFloat(weightStr);
+                    float feet = Float.parseFloat(feetStr);
+                    float inch = Float.parseFloat(inchStr);
 
-                float heightInMeters = (feet * 0.3048f) + (inch * 0.0254f);
-                float bmi = weight / (heightInMeters * heightInMeters);
-                String formattedBmi = String.format("%.2f", bmi);
+                    float bmi = BmiUtils.calculateBmi(weight, feet, inch);
+                    String formattedBmi = String.format("%.2f", bmi);
 
-                Intent intent = new Intent(MainActivity.this, DataTable.class);
-                intent.putExtra("bmi", formattedBmi);
-                startActivity(intent);
+                    Intent intent = new Intent(MainActivity.this, DataTable.class);
+                    intent.putExtra("bmi", formattedBmi);
+                    startActivity(intent);
+
+                } catch (NumberFormatException e) {
+                    Toast.makeText(MainActivity.this, "Invalid input. Please enter valid numbers.", Toast.LENGTH_SHORT).show();
+                } catch (IllegalArgumentException e) {
+                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
