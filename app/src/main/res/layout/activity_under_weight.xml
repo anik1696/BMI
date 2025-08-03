@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnderWeight"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="236dp"
+                android:background="@drawable/under_weight"
+                android:layout_margin="10dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Diet plan for under weight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:text="🥗 2. Diet Plan for Underweight
+Goal: Calorie surplus with nutrient-dense foods.
+
+🍽️ Daily Sample Meal Plan:
+Morning (7:00–9:00 AM):
+
+2 boiled eggs
+
+1 banana or mango
+
+2 slices whole wheat bread with peanut butter
+
+A glass of whole milk or a smoothie
+
+Mid-Morning Snack (10:30–11:30 AM):
+
+A handful of nuts (almonds, walnuts)
+
+Yogurt with honey
+
+Lunch (1:00–2:00 PM):
+
+Rice or whole wheat roti
+
+Protein (chicken, fish, tofu, lentils)
+
+Vegetables (spinach, carrots, beans)
+
+Salad with olive oil
+
+Evening Snack (4:00–5:00 PM):
+
+Cheese sandwich or boiled potato
+
+Milkshake or fruit juice
+
+Dinner (7:00–8:30 PM):
+
+Same as lunch, with a focus on protein
+
+Add curd or paneer (if vegetarian)
+
+Before Bed (10:00–11:00 PM):
+
+A glass of milk with almonds or dates"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Exercise plan for under weight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbox"
+
+                android:text="🏋️ 3. Exercise Plan for Underweight
+Goal: Build lean muscle, not lose more weight.
+
+💪 Weekly Routine:
+Monday, Wednesday, Friday:
+
+Strength Training (30–40 min):
+
+Bodyweight squats
+
+Push-ups
+
+Dumbbell curls (if available)
+
+Planks
+
+Light Cardio (15 min): brisk walking or cycling
+
+Tuesday, Thursday:
+
+Yoga or Stretching
+
+Light jogging or resistance band workouts
+
+Saturday:
+
+Play a sport (e.g., badminton, swimming, etc.)
+
+Sunday:
+
+Rest or light walkingt"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

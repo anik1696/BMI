@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataTable"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/manush_img"
+        android:layout_margin="10dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:background="@drawable/borderbox"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:hint="BMI will show here....."
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <!-- First Item -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/showData"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/show_img"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Show Data"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        />
+                </LinearLayout>
+
+                <!-- Second Item -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/clrimg"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/clr_img2"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp" />
+
+                    <TextView
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Clear Data"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+                <!-- Third Item -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/saveData"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/save_img1"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp" />
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Save Data"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/borderbox"
+                android:textSize="18sp"
+                android:text="Select the button as far your BMI"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                >
+                <TextView
+                    android:id="@+id/underWeight"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:text="Under Weight"
+                    android:gravity="center"
+                    android:textColor="#CF4239"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/borderbox"
+                    android:layout_gravity="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+
+                    android:backgroundTint="@color/ashcol"
+                    />
+                <TextView
+                    android:id="@+id/normalWeight"
+                    android:text="Normal Weight"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/borderbox"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="28sp"
+                    android:textColor="#CF4239"
+                    android:backgroundTint="@color/ashcol"
+                    />
+                <TextView
+                    android:id="@+id/overWeight"
+                    android:layout_width="250dp"
+                    android:gravity="center"
+                    android:layout_height="100dp"
+                    android:text="Over Weight"
+                    android:background="@drawable/borderbox"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#CF4239"
+                    android:backgroundTint="@color/ashcol"
+                    />
+                <TextView
+                    android:id="@+id/obese"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:text="Obese"
+                    android:gravity="center"
+                    android:background="@drawable/borderbox"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#CF4239"
+                    android:backgroundTint="@color/ashcol"
+                    />
+                <TextView
+                    android:id="@+id/morbidlyObese"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:text="Extremely obese"
+                    android:background="@drawable/borderbox"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#CF4239"
+                    android:gravity="center"
+                    android:backgroundTint="@color/ashcol"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

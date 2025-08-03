@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnderWeight"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="236dp"
+                android:background="@drawable/normal_weight"
+                android:layout_margin="10dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Diet plan for normal weight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:text="🕒 Meal Timing (Can be adjusted based on your schedule)
+🌅 Breakfast (7:00–8:00 AM)
+2 boiled eggs / scrambled eggs
+
+1 slice whole grain toast / oats
+
+1 cup milk or green tea
+
+1 banana or apple
+
+☀️ Mid-Morning Snack (10:30–11:00 AM)
+Handful of nuts (almonds/walnuts)
+
+Seasonal fruits
+
+🍽️ Lunch (1:00–2:00 PM)
+1 cup rice or 2 whole wheat chapatis
+
+Grilled chicken / lentils / fish
+
+Mixed vegetable curry or salad
+
+Yogurt or buttermilk
+
+🌤️ Evening Snack (4:30–5:30 PM)
+Green tea or black coffee
+
+Roasted chana or boiled corn
+
+🌙 Dinner (7:30–8:30 PM)
+1–2 chapatis or 1 cup rice
+
+Cooked vegetables
+
+Light protein: paneer, tofu, eggs, or lean chicken
+
+Salad (cucumber, carrot, tomato)
+
+🛏️ Before Bed (Optional)
+1 glass warm milk (optional)"
+                android:textAlignment="center"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Exercise plan for normal weight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbox"
+                android:text=" Slow and Increase Gradually) 🔰 Week 1–2:
+                 Easy Start Walking: 20–30 minutes daily (slow pace)
+                 Stretching: 10 minutes morning and evening Breathing
+                 exercises: Deep breathing / Anulom-Vilom
+                  ⏩ Week 3–4: Light Cardio + Mobility Brisk walk: 30–45 minutes Chair exercises / low-impact aerobic workouts (YouTube has plenty for beginners) Bodyweight exercises: Wall pushups (2 sets of 10) Seated leg lifts Standing march in place
+                   🏋️‍♀️ Week 5 onwards: Strength + Cardio Mix Alternate days: Cardio (brisk walk, cycling, step-ups) Strength training (resistance bands, bodyweight squats, pushups, planks) Yoga (1–2 times/week for flexibility and stress"
+
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnderWeight"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/obesy"
+                android:layout_margin="10dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Diet plan for obese"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:text="
+🥗 DIET PLAN FOR OBESITY (Calorie Controlled: ~1500-1800 kcal/day)
+🕗 Morning (7–8 AM)
+Warm water with lemon (optional: 1 tsp honey)
+
+5–6 soaked almonds or 1 boiled egg
+
+🍳 Breakfast (8:30–9:30 AM)
+Choose one:
+
+1 bowl oats porridge with skim milk + 1 fruit (banana or apple)
+
+2 boiled eggs + 1 slice whole wheat bread
+
+Vegetable upma/poha (1 bowl)
+
+☕ Mid-Morning Snack (11 AM)
+1 fruit (papaya, guava, orange)
+
+OR 1 cup green tea + cucumber slices
+
+🍛 Lunch (1–2 PM)
+1 cup brown rice or 2 chapatis (whole wheat)
+
+1 bowl dal / chicken / fish curry
+
+1 bowl vegetables (steamed or lightly cooked)
+
+Salad (cucumber, tomato, carrot)
+
+🍵 Evening Snack (4–5 PM)
+1 cup green tea / black coffee (no sugar)
+
+1 handful of roasted chana or fox nuts (makhana)
+
+🥗 Dinner (7–8 PM)
+Vegetable soup + grilled paneer/chicken
+
+OR 1 chapati + boiled veggies or salad
+
+No rice at night
+
+🌙 Before Bed (Optional)
+1 glass warm skim milk (no sugar)
+
+OR 2 soaked walnuts"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Exercise plan for obese"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbox"
+
+                android:text="@string/obese_exercise"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

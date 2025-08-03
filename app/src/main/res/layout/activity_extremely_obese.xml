@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnderWeight"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@drawable/extreme"
+                android:layout_margin="10dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Diet plan for extremely obese"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                android:textAlignment="center"
+                android:text="🥗 EXTREMELY OBESE – BEGINNER DIET PLAN
+(Low-calorie, high-fiber, low-sugar, anti-inflammatory)
+🕗 Morning (6:30–7:30 AM)
+1 glass lukewarm water with lemon
+
+5 soaked almonds or 2 walnuts (avoid if allergic)
+
+(Optional) Add 1 teaspoon chia seeds to water (soaked overnight)
+
+🍳 Breakfast (8:00–9:00 AM)
+Choose one:
+
+1 bowl vegetable oats or dalia (no oil)
+
+1 slice brown bread + 2 boiled eggs (or paneer if vegetarian)
+
+Smoothie: Spinach + cucumber + green apple + water + chia seeds
+
+✅ Avoid tea/coffee with sugar
+
+🕒 Mid-Morning (11:00 AM)
+1 fruit: apple, guava, papaya, or watermelon
+
+OR cucumber/carrot slices
+
+🍽️ Lunch (1:00–2:00 PM)
+1–2 small whole wheat rotis or 1 small bowl brown rice
+
+1 bowl dal or lean chicken
+
+1 bowl steamed mixed vegetables
+
+Salad: tomato, cucumber, beetroot
+
+🕔 Evening Snack (4:30–5:30 PM)
+Green tea (no sugar)
+
+Handful of roasted chana, fox nuts, or 1 boiled egg
+
+🌙 Dinner (7:00–8:00 PM)
+Vegetable soup + paneer/tofu/chicken
+
+OR 1 small roti + veggies
+
+OR grilled vegetables with hummus
+
+✅ Avoid rice at dinner
+✅ Try to eat dinner 2–3 hours before sleeping
+
+🌃 Before Bed (Optional)
+1 cup warm water + 1 pinch turmeric
+
+Avoid milk if trying to reduce calories faster"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/borderbox"
+                android:text="Exercise plan for under weight"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderbox"
+
+                android:text="
+ 🚶‍♂️ EXERCISE ROUTINE FOR EXTREMELY OBESE (Beginner and Safe)
+🔰 WEEK 1–2: FOUNDATION PHASE
+Duration: 15–20 minutes per day
+
+✅ Low-Impact Movements (Daily)
+Seated march in place – 1 minute
+
+Seated arm raises – 2 sets of 10
+
+Wall push-ups – 2 sets of 5
+
+Seated leg lifts – 2 sets of 10
+
+Gentle neck/shoulder stretches
+
+🧘 Breathing and Relaxation
+Deep breathing (Anulom-Vilom, 5 mins)
+
+Guided meditation (YouTube apps like Headspace or Calm)
+
+⏩ WEEK 3–4: CARDIO + STRENGTH COMBO
+Walking indoors/outdoors: 20–30 minutes daily (slow pace, take breaks)
+
+Chair squats (assisted): 2 sets of 5–8 reps
+
+Step-ups on low platform (if safe): 1 set of 10 reps
+
+Light resistance band workouts (arms, legs)
+
+✅ WEEK 5+: INCREASE INTENSITY SLIGHTLY
+Alternate days:
+
+Cardio (walking, slow stationary cycling)
+
+Strength (resistance bands, bodyweight support)
+
+✅ Add water workouts if access to a pool – it reduces joint pressure."
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

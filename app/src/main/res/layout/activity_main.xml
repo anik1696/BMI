@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@drawable/main_baground"
+       android:orientation="vertical"
+       android:layout_gravity="center"
+       >
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="200dp"
+           android:background="@drawable/bmi_bannre2"
+           android:layout_margin="10dp"
+           />
+
+       <LinearLayout
+           android:layout_width="325dp"
+           android:layout_height="300dp"
+           android:layout_gravity="center"
+           android:layout_marginTop="10dp"
+           android:background="@drawable/mainbox"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginBottom="10dp"
+               android:text="What is your weight in kg ?"
+               android:textSize="20sp" />
+
+           <EditText
+               android:id="@+id/edWeight"
+               android:layout_width="280dp"
+               android:layout_height="50sp"
+               android:layout_marginLeft="15dp"
+               android:layout_marginBottom="10dp"
+               android:background="@drawable/borderbox"
+               android:hint="enter kg value here "
+               android:textSize="20sp"
+               android:inputType="number"/>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="10dp"
+               android:text="What is your height ?"
+               android:textSize="20sp" />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <EditText
+                   android:id="@+id/edFeet"
+                   android:layout_width="130dp"
+                   android:layout_height="50dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="10dp"
+                   android:background="@drawable/borderbox"
+                   android:hint="feet"
+                   android:textSize="20sp"
+                   android:inputType="number"
+                   />
+
+               <EditText
+                   android:id="@+id/edInch"
+                   android:layout_width="130dp"
+                   android:layout_height="50dp"
+                   android:background="@drawable/borderbox"
+                   android:hint="inch"
+                   android:textSize="20sp"
+                   android:inputType="number"
+                   />
+           </LinearLayout>
+
+
+
+       </LinearLayout>
+
+
+       <Button
+           android:id="@+id/btnEnter"
+           android:layout_width="161dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginTop="65dp"
+           android:backgroundTint="#4A9EE1"
+           android:text="Enter"
+           android:textSize="22sp"
+
+           />
+
+
+
+
+   </LinearLayout>
+
+</LinearLayout>
