@@ -9,22 +9,19 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class DataTable extends AppCompatActivity {
-
+    
     TextView tvResult, underWeight, normalWeight, overWeight, obese, morbidlyObese;
-    ImageView clrimg, showData, saveData;
-    DBHelper dbHelper;
+    ImageView clrimg, showData, saveData, btnUndo, btnRedo;
+    BMIFacade bmiFacade;
     String bmi;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.data_table);
-
-        // Initialize views
+        
+    
         tvResult = findViewById(R.id.tvResult);
         clrimg = findViewById(R.id.clrimg);
         underWeight = findViewById(R.id.underWeight);
@@ -34,46 +31,38 @@ public class DataTable extends AppCompatActivity {
         morbidlyObese = findViewById(R.id.morbidlyObese);
         showData = findViewById(R.id.showData);
         saveData = findViewById(R.id.saveData);
-
-        // Initialize database helper
-        dbHelper = new DBHelper(this);
-
-        // Get BMI from intent
+        btnUndo = findViewById(R.id.btnUndo);
+        btnRedo = findViewById(R.id.btnRedo);
+        
+    
+        bmiFacade = new BMIFacade(this);
+        
+        
+        String resultText = getIntent().getStringExtra("result_text");
         bmi = getIntent().getStringExtra("bmi");
-
-        if (bmi != null) {
-            float bmiValue = Float.parseFloat(bmi);
-
-            if (bmiValue < 18.5) {
-                tvResult.setText("Your BMI is " + bmi + "\nYou are underweight");
-            } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
-                tvResult.setText("Your BMI is " + bmi + "\nYou are normal");
-            } else if (bmiValue >= 25 && bmiValue <= 29.9) {
-                tvResult.setText("Your BMI is " + bmi + "\nYou are overweight");
-            } else if (bmiValue >= 30 && bmiValue <= 34.9) {
-                tvResult.setText("Your BMI is " + bmi + "\nYou are obese");
-            } else {
-                tvResult.setText("Your BMI is " + bmi + "\nYou are extremely obese");
-            }
+        
+        if (resultText != null) {
+            tvResult.setText(resultText);
         }
-
-        // Clear BMI result
+        
+        
+        updateUndoRedoButtons();
+        
+        
         clrimg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tvResult.setText("");
             }
         });
-
-        // Save BMI to SQLite on click
+        
+        
         saveData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (bmi != null) {
-                    String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-                    boolean inserted = dbHelper.insertBMI(bmi, timestamp);
-                    if (inserted) {
-                        // Optional: Toast message for user feedback
+                    boolean saved = bmiFacade.saveBMIResult(Float.parseFloat(bmi));
+                    if (saved) {
                         Toast.makeText(DataTable.this, "BMI saved successfully!", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(DataTable.this, "Failed to save BMI.", Toast.LENGTH_SHORT).show();
@@ -81,46 +70,60 @@ public class DataTable extends AppCompatActivity {
                 }
             }
         });
-
-
-        // Show saved BMI data
+        
+        
+        btnUndo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bmiFacade.undo();
+                updateUndoRedoButtons();
+                Toast.makeText(DataTable.this, "Undo performed", Toast.LENGTH_SHORT).show();
+            }
+        });
+        
+    
+        btnRedo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bmiFacade.redo();
+                updateUndoRedoButtons();
+                Toast.makeText(DataTable.this, "Redo performed", Toast.LENGTH_SHORT).show();
+            }
+        });
+        
+        
         showData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DataTable.this, ShowDataActivity.class));
             }
         });
-
-        // Open advice activities
-        underWeight.setOnClickListener(new View.OnClickListener() {
+        
+        
+        setupAdviceClickListeners();
+    }
+    
+    private void setupAdviceClickListeners() {
+        View.OnClickListener adviceClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DataTable.this, UnderWeight.class));
+                if (bmi != null) {
+                    float bmiValue = Float.parseFloat(bmi);
+                    Intent adviceIntent = bmiFacade.getAdviceIntent(bmiValue);
+                    startActivity(adviceIntent);
+                }
             }
-        });
-        normalWeight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DataTable.this, NormalWright.class));
-            }
-        });
-        overWeight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DataTable.this, OverWeight.class));
-            }
-        });
-        obese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DataTable.this, Obese.class));
-            }
-        });
-        morbidlyObese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(DataTable.this, ExtremelyObese.class));
-            }
-        });
+        };
+        
+        underWeight.setOnClickListener(adviceClickListener);
+        normalWeight.setOnClickListener(adviceClickListener);
+        overWeight.setOnClickListener(adviceClickListener);
+        obese.setOnClickListener(adviceClickListener);
+        morbidlyObese.setOnClickListener(adviceClickListener);
+    }
+    
+    private void updateUndoRedoButtons() {
+        btnUndo.setEnabled(bmiFacade.canUndo());
+        btnRedo.setEnabled(bmiFacade.canRedo());
     }
 }
