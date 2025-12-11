@@ -5,7 +5,6 @@ public interface DatabaseCommand {
     void undo();
 }
 
-// InsertBMICommand.java
 package com.example.bmi;
 
 import android.content.ContentValues;
@@ -38,7 +37,6 @@ public class InsertBMICommand implements DatabaseCommand {
     }
 }
 
-// DeleteAllCommand.java
 package com.example.bmi;
 
 import java.util.ArrayList;
@@ -62,19 +60,18 @@ public class DeleteAllCommand implements DatabaseCommand {
                 android.database.CursorUtil.getString(cursor, DBHelper.COL_ID);
                 android.database.CursorUtil.getString(cursor, DBHelper.COL_BMI);
                 android.database.CursorUtil.getString(cursor, DBHelper.COL_TIMESTAMP);
-                // Simplified - in real implementation, you'd copy all values
+              
                 deletedRecords.add(values);
             } while (cursor.moveToNext());
             cursor.close();
         }
-        
-        // Perform deletion
+      
         return dbHelper.deleteAllData();
     }
     
     @Override
     public void undo() {
-        // Reinsert deleted records
+           
         for (ContentValues values : deletedRecords) {
             dbHelper.getWritableDatabase().insert(DBHelper.TABLE_NAME, null, values);
         }
